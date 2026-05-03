@@ -1,0 +1,47 @@
+{
+    "inventory": {
+        "bass": {
+            "beat up": 0,
+            "standard": 0,
+            "long": 0,
+            "short": 0,
+            "flawless": 0
+        },
+        "trout": {
+            "beat up": 0,
+            "standard": 0,
+            "long": 0,
+            "short": 0,
+            "flawless": 0
+        },
+        "bluegill": {
+            "beat up": 0,
+            "standard": 0,
+            "long": 0,
+            "short": 0,
+            "flawless": 0
+        },
+        "crapie": {
+            "beat up": 0,
+            "standard": 0,
+            "long": 0,
+            "short": 0,
+            "flawless": 0
+        },
+        "coyfish": {
+            "beat up": 0,
+            "standard": 0,
+            "long": 0,
+            "short": 0,
+            "flawless": 0
+        },
+        "retrofish": {
+            "beat up": 0,
+            "standard": 0,
+            "long": 0,
+            "short": 0,
+            "flawless": 0
+        }
+    },
+    "money": 0
+}
