@@ -82,7 +82,8 @@ def wipe_save():
             "bluegill": {"beat up": 0, "standard": 0, "long": 0, "short": 0, "flawless": 0},
             "crapie": {"beat up": 0, "standard": 0, "long": 0, "short": 0, "flawless": 0},
             "coyfish": {"beat up": 0, "standard": 0, "long": 0, "short": 0, "flawless": 0},
-            "retrofish": {"beat up": 0, "standard": 0, "long": 0, "short": 0, "flawless": 0}
+            "retrofish": {"beat up": 0, "standard": 0, "long": 0, "short": 0, "flawless": 0},
+            #"dickfish": {"beat up": 0, "standard": 0, "long": 0, "short": 0, "flawless": 0}
         }
         money = 0
 
@@ -95,7 +96,7 @@ def wipe_save():
 # ================= GAME DATA =================
 
 fish = ["bass", "trout", "bluegill", "crapie"]
-specialfish = ["retrofish", "coyfish"]
+specialfish = ["retrofish", "coyfish","dickfish"]
 
 fish_values = {
     "bass": 10,
@@ -103,7 +104,8 @@ fish_values = {
     "bluegill": 5,
     "crapie": 5,
     "coyfish": 100,
-    "retrofish": 100
+    "retrofish": 100,
+    #"dickfish": 150
 }
 
 conditions = ["beat up", "standard", "long", "short", "flawless"]
