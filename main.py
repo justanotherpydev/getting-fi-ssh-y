@@ -14,14 +14,8 @@ def split():
 def load_game():
     global inventory, money
 
-    try:
-        with open(SAVE_FILE, "r") as f:
-            data = json.load(f)
-            inventory = data["inventory"]
-            money = data["money"]
-    except:
-        print("No save found, starting new game...")
-        inventory = {
+    def new_inventory():
+        return {
             "bass": {"beat up": 0, "standard": 0, "long": 0, "short": 0, "flawless": 0},
             "trout": {"beat up": 0, "standard": 0, "long": 0, "short": 0, "flawless": 0},
             "bluegill": {"beat up": 0, "standard": 0, "long": 0, "short": 0, "flawless": 0},
@@ -29,7 +23,32 @@ def load_game():
             "coyfish": {"beat up": 0, "standard": 0, "long": 0, "short": 0, "flawless": 0},
             "retrofish": {"beat up": 0, "standard": 0, "long": 0, "short": 0, "flawless": 0}
         }
+
+    try:
+        with open(SAVE_FILE, "r") as f:
+            data = json.load(f)
+            inventory = data["inventory"]
+            money = data["money"]
+
+    except FileNotFoundError:
+        print("No save found, starting new game...")
+        inventory = new_inventory()
         money = 0
+
+    except (json.JSONDecodeError, KeyError):
+        print("Save file broken, resetting...")
+        inventory = new_inventory()
+        money = 0
+        money = 0
+    except FileNotFoundError:
+        print("No save found, creating one...")
+        inventory = new_inventory()
+        money = 0
+        with open(SAVE_FILE, "w") as f:
+            json.dump({"inventory": inventory, "money": money}, f, indent=4)
+
+
+
 
 
 def save_game(silent=False):
@@ -169,6 +188,7 @@ def show_stats():
 def open_shop():
     print("shop coming soon...")
     split()
+
 
 
 # ================= COMMANDS =================
